@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+  
+    
+}
+h1{
+    color:white;
+    margin: 34px;
+    font-size:40px ;
+
+}
+.articulo{
+    list-style: none;
+}
+.precio{
+    list-style: none;
+}
+.nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.iconoNav{
+    font-size: 80%;
+    color: white;
+    margin: 10px;
+
+}
+.contenedor{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:rgb(18,0,65);
+    height: 100vh;
+    
+    
+}
+.saldoTotal{
+    width: 53%;
+    margin: 0px 0px 84px 118px ;
+}
+.iconoSaldototal{
+    color:white;
+    background-color:rgb(140,61,186) ;
+    border-radius: 40%;
+    
+    
+    
+
+}
+
+.ingrsoDinero{
+    margin: 10px;
+    height: 30vh;
+   
+    font-size: 30px;
+    text-align: center;
+    width: 82%;
+    border-radius: 20px;
+    background: linear-gradient(25deg, rgba(131,58,180,1) 0%, rgba(253,126,29,1) 50%, rgba(252,176,69,1) 100%);
+
+}
+.historial_gaso_montto{
+    display: flex;
+    justify-content:center;
+    height: 15%;
+    width: 100%;
+   margin-right: 29px;
+    
+    
+
+}
+button{
+    height: 26px;
+    background-color:rgb(18,0,65);
+    color: aqua;
+    font-size: 30px;
+    border: none;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+.gastos{
+    width: 31%;
+    background: rgb(40,27,84);
+    color: white;
+}
+.montos{
+    width: 31%;
+    background: rgb(40,27,84);
+    color: white;
+}
+input{
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    height: 40%;
+    padding-left: 10px;
+    margin-left: 49px;
+    
+    
+    
+}
+.producto-span{
+    margin-left: 10px;
+}
+.valor-span{
+    margin-left: 36%;
+}
+.articulo{
+    width: 100%;
+}
+.boton-eliminar{
+    
+        margin-left: 45%;
+        font-size: 17px;
+        background-color:#d72929;
+        color: white;
+        border-radius: 16px;
+        width: 93px;
+    
+}
+.listas-li{
+    margin-bottom: 10px;
+}
+.historial{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 20vh;
+    background:rgb(18,0,65);
+    border: none;
+    color: aliceblue;
+    
+}
+.resumen_gastos{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    
+}
+.resumen{
+    
+    background-color:rgb(40,27,84) ;
+    color: white;
+    width: 15%;
+    padding: 30px 5px;
+    
+    border-radius: 25px;
+    text-align: center;
+    list-style: none;
+}
+
+
+.listasA{display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.listas{
+    list-style: none;
+}
+
+@media(max-width:390px){
+    h1{
+        color:white;
+        margin: 29px;
+        font-size:31px ;
+    
+    }
+    .saldoTotal{
+        width: 100%;
+        margin: 0px;
+
+    
+    }
+    .ingrsoDinero{
+        margin: 44px 0px 60px 21px;
+    }
+    .resumen_gastos {
+        display: flex;
+        width: 97%;
+    }
+    .resumen {
+        background-color: rgb(40,27,84);
+        color: white;
+        width: 26%;
+        border-radius: 25px;
+        list-style: none;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 12px 0px 15px;
+        margin: 5px;
+        font-size: 23px;
+        
+    }
+    
+    .historial{
+        width: 84%;
+    }
+    .valor-span{
+        margin-left: 23px;
+        font-size: 23px;
+    }
+    .producto-span{
+        font-size: 26px;
+    }
+    .boton-eliminar{
+        margin-left: 51px;
+    }
+    .historial_gaso_montto {
+       
+        height: 15%;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .gastos {
+        width: 37%;
+        background: rgb(40,27,84);
+        color: white;
+        margin-left: 24px;
+        font-size: 21px;
+    }
+    .montos {
+        width: 37%;
+        background: rgb(40,27,84);
+        color: white;
+        margin-left: 18px;
+        font-size: 21px;
+    }
+
+
+}
+@media(min-width:391px) and (max-width:768px){
+    h1 {
+        color: white;
+        margin: 29px;
+        font-size: 40px;
+    }
+    .saldoTotal {
+        width: 75%;
+        margin: 0px 0px 48px 14px;
+       
+    }
+
+    .ingrsoDinero{
+        width: 89%;
+    }
+    .historial_gaso_montto{
+        margin-right: 36px;
+        height: 102px;
+    }
+    
+    .resumen_gastos {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        height: 62px;
+    }
+    .resumen {
+        background-color: rgb(40,27,84);
+        color: white;
+        width: 25%;
+        border-radius: 25px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .gastos{
+        font-size: 20px;
+    }
+    .montos{
+        font-size: 20px;
+    }
+    .historial{
+        width: 72%;
+        height: 30vh;
+        margin-bottom: 20px;
+    }
+   .valor-span{
+    font-size: 26px;
+   }
+   .producto-span{
+    font-size: 23px;
+   }
+   .boton-eliminar{
+    margin-left: 90px;
+   }
+    
+}
+@media(min-width:769px) and (max-width:768px){
+h1{
+    margin: 32px;
+}
+.ingrsoDinero{
+    font-size:82px ;
+}
+button{
+    margin-top: 6px;
+}
+.gastos{
+font-size: 20px;
+height: 62%;
+}
+.montos{
+font-size: 20px;
+height: 62%;
+}
+.saldoTotal {
+    width:77%;
+    margin: 0px 0px 34px 100px;
+}
+.historial_gaso_montto{
+    height: 9%;
+}
+.valor-span {
+    margin-left: 32%;
+    font-size: 27px;
+}
+.producto-span{
+    margin-left: 10px;
+    font-size: 32px;
+}
+.boton-eliminar{
+    margin-left: 36%;
+    font-size: 20px;
+    margin-left: 36%;
+    font-size: 17px;
+    background-color: grey;
+    border-radius: 16px;
+    width: 100px;
+    height: 43px;
+    
+}
+.resumen_gastos{
+    height: 10%;
+}
+.resumen{
+    width: 22%;
+    font-size: 28px;
+}
+.historial{
+    height: 32vh;
+}
+
+}
+
+
+
+/* responsive horizontal*/
+@media(max-width:844px) and (min-width:843px){
+   h1{
+    margin: 16px;
+    font-size: 24px;
+   }
+   .saldoTotal {
+    width: 65%;
+    margin: 0px 0px 24px 15px;
+}
+.ingrsoDinero {
+    font-size: 48px;
+}
+.historial{
+    height: 22vh;
+    width: 68%;
+    margin-right: 54px;
+}
+.valor-span{
+    margin-left: 24%;
+}
+.boton-eliminar{
+    margin-left: 41%;
+}
+.historial_gaso_montto {
+    height: 14%;
+}
+.gastos {
+    font-size: 20px;
+    height: 83%;
+}
+.montos {
+    font-size: 20px;
+    height: 83%;
+}
+.resumen {
+    width: 19%;
+    font-size: 18px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resumen_gastos {
+    height: 10%;
+    margin-right: 47px;
+}
+}
+
+@media(max-width:1024px) and (min-width:1023px){
+    h1{
+        margin: 19px;
+        font-size: 34px;
+    }
+    .saldoTotal {
+        width: 77%;
+        margin: 8px 0px 28px 65px;
+    }.ingrsoDinero {
+        font-size: 47px;
+    }
+    .gastos{
+        font-size: 20px;
+    }
+    .montos{
+        font-size: 20px;
+    }
+    .historial_gaso_montto {
+        height: 9%;
+        width: 96%;
+        margin-right: 71px;
+    }
+    .historial {
+        height: 32vh;
+        margin-right: 44px;
+        width: 65%;
+    }
+    .resumen {
+        width: 27%;
+        font-size: 23px;
+    }
+    .resumen_gastos{
+        height: 9%;
+    }
+    .boton-eliminar{
+        margin-left: 33%;
+    }
+    .producto-span{
+        font-size: 24px;
+    }
+    .valor-span{
+        font-size: 21px;
+        margin-left: 25%;
+    }
+    .boton-eliminar{
+        margin-left: 39%;
+    }
+}
+
+
+@media(min-width:1439px) and (max-width:1440px) {
+    .ingrsoDinero{
+        font-size: 63px;
+        margin-left: 60px;
+    }
+    .saldoTotal {
+        width: 53%;
+        margin: 0px 0px 40px 0px;
+    }
+    .historial_gaso_montto{
+        height: 9%;
+        margin-right: 27px;
+    }
+    .gastos{
+        font-size: 22px;
+        height: 57px;
+    }
+    .montos{
+        font-size: 22px;
+        height: 57px;
+    }
+    .valor-span{
+        margin-left: 26%;
+        font-size: 27px;
+        
+    }
+    .producto-span{
+        font-size: 30px;
+    }
+    .historial{
+        width: 68%;
+        height: 33vh;
+    }
+    .boton-eliminar{
+        margin-left: 41%;
+    }
+}
+@media(min-width:899px) and (max-width:900px){
+    h1{
+        margin: 52px 0px 0px 67px;
+    }
+    .saldoTotal {
+        width: 100%;
+        margin: 0px 0px 84px 116px;
+    }
+    .ingrsoDinero{
+        font-size: 57px;
+    }
+    .historial_gaso_montto{
+        height: 5%;
+        margin: 0px 15px 55px 0px
+    }
+    .producto-span{
+        font-size: 34px;
+    }
+    .valor-span{
+        font-size: 30px;
+        margin-left: 18%;
+    }
+    .boton-eliminar{
+        margin-left: 40%;
+    }
+    .gastos{
+        height: 100%;
+        font-size: 23px;
+        width: 38%;
+    }
+    .montos{
+        height: 100%;
+        font-size: 23px;
+        width: 38%;
+    }
+    .historial{
+        width: 85%;
+        height: 34vh;
+    }
+    .resumen_gastos{
+        width: 90%;
+    }
+    .resumen{
+        width:29% ;
+        font-size: 25px;
+    }
+}
