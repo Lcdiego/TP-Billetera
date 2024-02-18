@@ -107,13 +107,24 @@
 
 }
 
-button {
+.btn1 {
     height: 26px;
     background-color: transparent;
-    color: aqua;
+    color: #3cff4c;;
     font-size: 30px;
     border: none;
     padding: 4px 5px;
+    cursor: pointer;
+}
+
+.btn2 {
+    height: 26px;
+    background-color: transparent;
+    color: #3cff4c;
+    font-size: 30px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -155,6 +166,8 @@ input {
 
 .producto-span {
     margin-left: 55px;
+    display: flex;
+  align-items: center;
 }
 
 .producto-span {
@@ -167,6 +180,8 @@ input {
 
 .valor-span {
     margin-left: 10%;
+    display: flex;
+    align-items: center;
 }
 
 .articulo {
@@ -177,10 +192,10 @@ input {
 
 
     font-size: 17px;
-
+    background: transparent;
     color: rgb(201, 74, 74);
     border-radius: 16px;
-
+    border: none;
     margin-right: 55px;
 
 }
@@ -226,7 +241,8 @@ input {
     text-align: center;
     list-style: none;
 }
-.resumen{
+
+.resumen {
     font-family: "Black Ops One", system-ui;
     font-weight: 400;
     font-style: normal;
