@@ -1,4 +1,3 @@
-// Declarar las variables fuera del evento DOMContentLoaded
 let totalIngresosValue = 0;
 let totalGastosValue = 0;
 
@@ -14,59 +13,68 @@ document.addEventListener("DOMContentLoaded", function() {
   btnSumar.addEventListener('click', function(event) {
     event.preventDefault();
     let pago = document.getElementById("dinero").value;
-    let monto = parseFloat(pago);
+    let monto = Number(pago);
     totalIngresosValue += monto;
-    totalIngresos.textContent =   `Ingresos: $ ${Number(totalIngresosValue)}`
-    disponible.textContent = `Disponible: $ ${Number(totalIngresosValue - totalGastosValue)}`;
+    totalIngresos.textContent = `Ingresos: $ ${Number(totalIngresosValue)}`;
+    
+    actualizarDisponible();
   });
 
- 
+  btnRestar.addEventListener("click", function(event) {
+    event.preventDefault();
 
-btnRestar.addEventListener("click", function(event) {
-  event.preventDefault();
+    let producto = document.getElementById("productos").value;
+    let valorProducto = parseFloat(document.getElementById("valorProductos").value);
 
-  let producto = document.getElementById("productos").value;
-  let valorProducto = parseFloat(document.getElementById("valorProductos").value);
+    if (producto && !isNaN(valorProducto)) {
+      totalGastosValue += valorProducto;
+      let listItem = document.createElement("li");
+      listItem.classList.add("listas-li");
+      let productoSpan = document.createElement("span");
+      productoSpan.textContent = producto;
+      productoSpan.classList.add("producto-span"); 
 
-  if (producto && !isNaN(valorProducto)) {
-    totalGastosValue += valorProducto;
-    let listItem = document.createElement("li");
-    listItem.classList.add("listas-li")
-    let productoSpan = document.createElement("span");
-    productoSpan.textContent = producto;
-    productoSpan.classList.add("producto-span"); 
-    
-    let valorSpan = document.createElement("span");
-    valorSpan.textContent = " $ " + valorProducto.toFixed(2);
-    valorSpan.classList.add("valor-span"); 
-    
-    listItem.appendChild(productoSpan);
-    listItem.appendChild(valorSpan);
-    
+      let valorSpan = document.createElement("span");
+      valorSpan.textContent = " $ " + valorProducto.toFixed(2);
+      valorSpan.classList.add("valor-span"); 
 
-    let deleteButton = document.createElement("button");
-    deleteButton.classList.add("boton-eliminar");
-    deleteButton.textContent = "Eliminar";
-    deleteButton.addEventListener("click", function() {
-      listItem.remove();
-      totalGastosValue -= valorProducto;
-      totalGastos.textContent = "Total Gastos: $ " + totalGastosValue.toFixed(2);
-      disponible.textContent = "Disponible: $ " + (totalIngresosValue - totalGastosValue).toFixed(2);
-    });
+      listItem.appendChild(productoSpan);
+      listItem.appendChild(valorSpan);
 
-    listItem.appendChild(deleteButton);
-    articuloList.appendChild(listItem);
+      let deleteButton = document.createElement("button");
+      deleteButton.classList.add("material-symbols-outlined");
+      deleteButton.textContent = "delete";
+      deleteButton.addEventListener("click", function() {
+        listItem.remove();
+        totalGastosValue -= valorProducto;
+        totalGastos.textContent = "Total Gastos: $ " + totalGastosValue.toFixed(2);
+        actualizarDisponible();
+      });
 
-    document.getElementById("productos").value = "";
-    document.getElementById("valorProductos").value = "";
+      listItem.appendChild(deleteButton);
+      articuloList.appendChild(listItem);
 
-    totalGastos.textContent = " Gastos: $ " + totalGastosValue.toFixed(2);
-    disponible.textContent = "Disponible: $ " + (totalIngresosValue - totalGastosValue).toFixed(2);
+      document.getElementById("productos").value = "";
+      document.getElementById("valorProductos").value = "";
+
+      totalGastos.textContent = " Gastos: $ " + totalGastosValue.toFixed(2);
+      actualizarDisponible();
+    }
+  });
+
+  function actualizarDisponible() {
+    let valorDisponible = totalIngresosValue - totalGastosValue;
+    disponible.textContent = `Disponible: $ ${valorDisponible.toFixed(2)}`;
+
+   
+    if (valorDisponible > 0) {
+      disponible.style.color = "green";
+    } else if (valorDisponible < 0) {
+      disponible.style.color = "red";
+    } else {
+      disponible.style.color = "black"; 
+    }
   }
-});
-
-
-
 });
 
 
